@@ -14,7 +14,6 @@ class NonprofitsController < ApplicationController
       flash[:notice] = "Your Non-Profit has been added!"
       redirect_to nonprofits_path
     else
-      flash[:alert] = "Something went wrong. Please try again."
       render "new"
     end
   end
@@ -33,7 +32,6 @@ class NonprofitsController < ApplicationController
       flash[:notice] = "Your Non-Profit has been edited."
       redirect_to nonprofit_path(@nonprofit)
     else
-      flash[:alert] = "Something went wrong. Please try again."
       render "edit"
     end
   end

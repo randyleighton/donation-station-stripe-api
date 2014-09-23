@@ -1,0 +1,9 @@
+<% content_for(:title, "Non-Profits | Donation Station" ) %>
+
+<h2>Non-Profits</h2>
+
+<% @nonprofits.each do |np| %>
+  <%= link_to "#{np.name}", nonprofit_path(np) %>
+<% end %>
+
+<%= link_to "New Non-Profit", new_nonprofit_path, :class => "btn btn-success" %>

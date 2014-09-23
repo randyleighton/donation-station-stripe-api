@@ -1,0 +1,7 @@
+<%= render "layouts/errors", object: @nonprofit %>
+
+<%= form_for @nonprofit do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit("Submit", :class => "btn btn-info") %>
+<% end %>
