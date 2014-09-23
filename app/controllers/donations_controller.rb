@@ -1,6 +1,7 @@
 class DonationsController < ApplicationController
 
   def new
+    @nonprofit = Nonprofit.find(params[:nonprofit_id])
     @donation = Donation.new
   end
 
@@ -21,7 +22,7 @@ class DonationsController < ApplicationController
   def destroy
     @donation = Donation.find(params[:id])
     @donation.destroy
-    flash[:notice] = "Your Non-Profit has been exterminated! EXTERMINATED!"
+    flash[:notice] = "Your donation has been exterminated! EXTERMINATED!"
     redirect_to donations_path
   end
 
