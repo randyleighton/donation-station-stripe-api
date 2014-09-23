@@ -1,12 +1,15 @@
 <%= render "layouts/errors", object: @donation %>
 
 <form action="/nonprofits/<%= @nonprofit.id %>/donations" method="POST" id="payment-form">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="donation[token]" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="donation[nonprofit_id]" value="<%= @nonprofit.id %>">
   <span class="payment-errors"></span>
 
   <div class="form-row">
     <label>
       <span>Amount</span>
-      <input type="text" size="20" data-stripe="amount"/>
+      <input type="text" size="20" name="donation[amount]" data-stripe="amount"/>
     </label>
   </div>
 

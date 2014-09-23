@@ -6,10 +6,11 @@ class DonationsController < ApplicationController
   end
 
   def create
+    @nonprofit = Nonprofit.find(params[:nonprofit_id])
     @donation = Donation.create(donation_params)
     if @donation.valid?
       flash[:notice] = "Thank you for your donation!"
-      redirect_to donations_path
+      redirect_to nonprofit_path(@nonprofit)
     else
       render "new"
     end
@@ -28,6 +29,6 @@ class DonationsController < ApplicationController
 
 private
   def donation_params
-    params.require(:donation).permit(:amount, :token).merge(:nonprofit_id => @nonprofit.id)
+    params.require(:donation).permit(:amount, :token, :nonprofit_id)
   end
 end

@@ -6,10 +6,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script type="text/javascript">
-  Stripe.setPublishableKey(ENV['TEST_PUBLISHABLE']);
-  </script>
-  <script type="text/javascript" src="../javascripts/scripts"></script>
 </head>
 
 <body class="container-fluid">
