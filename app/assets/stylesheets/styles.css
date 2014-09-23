@@ -1,0 +1,9 @@
+.image_box {
+  max-height: 50%;
+  border-radius: 2em !important;
+  background-color: lightgray !important;
+}
+
+.welcome-box h3, p {
+  text-align: center;
+}
