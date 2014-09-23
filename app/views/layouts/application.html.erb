@@ -6,7 +6,19 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="container">
+  <div id="page_header">
+    <%= link_to "Donation Station", root_path, :class => "heading_text" %>
+  </div>
+
+<% if flash[:notice] != nil %>
+  <div class='alert alert-success' role='alert'>
+    <%= flash[:notice] %></div>
+<% end %>
+<% if flash[:alert] != nil %>
+  <div class='alert alert-danger' role='alert'>
+    <%= flash[:alert] %></div>
+<% end %>
 
 <%= yield %>
 
