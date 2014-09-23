@@ -1,3 +1,21 @@
+h3, h2{
+  font-family: 'Philosopher', sans-serif !important;
+}
+
+* {
+  font-family: 'Cabin', sans-serif !important;
+}
+
+body {
+  padding: 75px;
+  background: url('sky.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 .image_box {
   max-height: 50%;
   border-radius: 2em !important;
@@ -7,3 +25,13 @@
 .welcome-box h3, p {
   text-align: center;
 }
+
+.foot-style {
+  margin-top: 25px;
+}
+
+.donation-list {
+border: 1px solid #1a520f;
+background-color: #87a892;
+}
+
