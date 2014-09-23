@@ -1,0 +1,11 @@
+default: &default
+  adapter: postgresql
+
+development:
+  <<: *default
+  database: donation-station_development
+
+test:
+  <<: *default
+  database: donation-station_test
+
