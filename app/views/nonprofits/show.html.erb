@@ -4,10 +4,11 @@
 
 <h3>Current Donations:</h3>
 
-<ul>
+<div>
   <% @nonprofit.donations.each do |donation| %>
-    <li><%= donation.id %>: <%= donation.amount %> (<%= donation.token %>)</li>
+    <div><%= donation.id %>: <%= donation.amount %></li>
   <% end %>
 </ul>
+</div>
 
 <%= link_to "Donate Now", new_nonprofit_donation_path(@nonprofit), :class => "btn btn-success" %>
