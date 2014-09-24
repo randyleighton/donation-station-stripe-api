@@ -2,6 +2,7 @@
 
 <form action="/nonprofits/<%= @nonprofit.id %>/donations" method="POST" id="payment-form">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="donation[user_id]" value="<%= @current_user.id %>">
   <input type="hidden" name="donation[nonprofit_id]" value="<%= @nonprofit.id %>">
   <span class="payment-errors"></span>
 
