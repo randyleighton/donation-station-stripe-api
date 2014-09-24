@@ -8,31 +8,31 @@
   <div class="form-row">
     <label>
       <span>Amount</span>
-      <input type="text" size="20" name="donation[amount]" data-stripe="amount"/>
+      <input type="text" size="20" name="donation[amount]" data-stripe="amount" placeholder="12"/>
     </label>
   </div>
 
   <div class="form-row">
     <label>
       <span>Card Number</span>
-      <input type="text" size="20" data-stripe="number"/>
+      <input type="text" size="20" data-stripe="number" value="4242424242424242"/>
     </label>
   </div>
 
   <div class="form-row">
     <label>
       <span>CVC</span>
-      <input type="text" size="4" data-stripe="cvc"/>
+      <input type="text" size="4" data-stripe="cvc" value="242"/>
     </label>
   </div>
 
   <div class="form-row">
     <label>
       <span>Expiration (MM/YYYY)</span>
-      <input type="text" size="2" data-stripe="exp-month"/>
+      <input type="text" size="2" data-stripe="exp-month" value="12"/>
     </label>
     <span> / </span>
-    <input type="text" size="4" data-stripe="exp-year"/>
+    <input type="text" size="4" data-stripe="exp-year" value="2015"/>
   </div>
 
   <button type="submit">Submit Payment</button>

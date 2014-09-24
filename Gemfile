@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'devise'
+gem 'simple_form'
 
 group :development do
   gem 'better_errors'

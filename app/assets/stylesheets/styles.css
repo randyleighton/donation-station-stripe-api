@@ -1,3 +1,28 @@
+.navbar {
+  background-color: #dff0d8 !important;
+}
+
+.navbar-brand a {
+  font-family: 'Philosopher', sans-serif !important;
+  font-style: italic;
+  font-size: 2em;
+}
+.nav-format {
+  float: left;
+  padding-right: 30px;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
+
+.nav-format p {
+  font-size: .5em;
+}
+
+.img-box {
+  max-width: 1.5em !important;
+  float: right;
+}
+
 h3, h2{
   font-family: 'Philosopher', sans-serif !important;
 }
@@ -31,7 +56,6 @@ body {
 }
 
 .donation-list {
-border: 1px solid #1a520f;
-background-color: #87a892;
+
 }
 

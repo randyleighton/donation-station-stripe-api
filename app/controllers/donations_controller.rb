@@ -1,4 +1,5 @@
 class DonationsController < ApplicationController
+  before_filter :authenticate_user!
 
   def new
     @nonprofit = Nonprofit.find(params[:nonprofit_id])
@@ -6,7 +7,6 @@ class DonationsController < ApplicationController
   end
 
   def create
-    binding.pry
     @nonprofit = Nonprofit.find(params[:nonprofit_id])
     @donation = Donation.create(donation_params)
     if @donation.valid?

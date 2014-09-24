@@ -1,0 +1,26 @@
+<% if user_signed_in? %>
+  <div class="nav-format">
+    Logged in as <strong><%= current_user.email %></strong>.
+  </div>
+  <div class="nav-format">
+    <%= link_to image_tag("edit.png", :id=>"edit-prof", :class=>"img-responsive img-box"), edit_user_registration_path %>
+    <p>Edit</p>
+  </div>
+  <div class="nav-format">
+    <%= link_to image_tag("logout.png", :id=>"logout-prof", :class=>"img-responsive img-box"), destroy_user_session_path, method: :delete %>
+    <p>Logout</p>
+  </div>
+<% else %>
+  <div class="nav-format">
+    <%= link_to image_tag("signup.png", :id=>"signup-prof", :class=>"img-responsive img-box"), new_user_registration_path %>
+    <p>Sign Up</p>
+  </div>
+  <div class="nav-format">
+    <%= link_to image_tag("login.png", :id=>"login-prof", :class=>"img-responsive img-box"), new_user_session_path %>
+    <p>Login</p>
+  </div>
+  <div class="nav-format">
+    <%= link_to image_tag("home.png", :id=>"home-page", :class=>"img-responsive img-box"),root_path %>
+    <p>Home</p>
+  </div>
+<% end %>

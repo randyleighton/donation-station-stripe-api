@@ -6,7 +6,7 @@
 <div class="donation-list">
 <h3>Current Donations:</h3>
   <% @nonprofit.donations.each do |donation| %>
-    <div><%= donation.id %>: <%= donation.amount %></div>
+    <div><%= donation.id %>: <%= donation.amount.to_f / 100 %></div>
   <% end %>
 </div>
 <div class="foot-style">
