@@ -1,0 +1,53 @@
+<%= render "layouts/errors", object: @subscription %>
+
+<h2>Create Your Subscription</h2>
+
+<form action="/plans/<%= @plan.id %>/subscriptions" method="POST" id="payment-form">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="subscription[user_id]" value="<%= current_user.id %>">
+  <input type="hidden" name="subscription[plan_id]" value="<%= @plan.id %>">
+  <span class="payment-errors"></span>
+
+  <div class="form-row">
+    <label>
+      <span>Amount</span>
+      <input type="text" size="20" name="subscription[amount]" data-stripe="amount" placeholder="12"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Card Number</span>
+      <input type="text" size="20" data-stripe="number" value="4242424242424242"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-stripe="cvc" value="242"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Expiration (MM/YYYY)</span>
+      <input type="text" size="2" data-stripe="exp-month" value="12"/>
+    </label>
+    <span> / </span>
+    <input type="text" size="4" data-stripe="exp-year" value="2015"/>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Non-Profit</span>
+    </label>
+    <select>
+      <% Nonprofit.all.each do |nonprofit| %>
+        <option value="#{nonprofit.name}"></option>
+      <% end %>
+    </select>
+  </div>
+
+  <button type="submit">Submit Payment</button>
+</form>

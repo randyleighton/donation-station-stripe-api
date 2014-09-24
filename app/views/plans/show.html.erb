@@ -1,1 +1,4 @@
 <h2><%= @plan.name %></h2>
+<i>$<%= @plan.amount %>.00 per month</i>
+<br>
+<%= link_to "Subscribe Now", new_plan_subscription_path(@plan), :class => "btn btn-success foot-style" %>

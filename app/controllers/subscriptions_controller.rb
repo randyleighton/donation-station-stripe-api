@@ -6,16 +6,16 @@ class SubscriptionsController < ApplicationController
     end
 
     def new
-      @nonprofit = Nonprofit.find(params[:nonprofit_id])
+      @plan = Plan.find(params[:plan_id])
       @subscription = Subscription.new
     end
 
     def create
-      @nonprofit = Nonprofit.find(params[:nonprofit_id])
+      @plan = Plan.find(params[:plan_id])
       @subscription = Subscription.create(subscription_params)
       if @subscription.valid?
         flash[:notice] = "Thank you for your subscription!"
-        redirect_to nonprofit_path(@nonprofit)
+        redirect_to plan_path(@plan)
       else
         render "new"
       end
@@ -34,6 +34,6 @@ class SubscriptionsController < ApplicationController
 
   private
     def donation_params
-      params.require(:donation).permit(:amount, :token, :nonprofit_id).merge(:user_id => current_user.id)
+      params.require(:donation).permit(:amount, :token, :nonprofit_id, :plan_id).merge(:user_id => current_user.id)
     end
 end

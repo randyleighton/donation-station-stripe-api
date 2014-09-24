@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :donations, :except => [:index, :edit, :update]
   end
 
-  resources :subscriptions, :except => [:edit, :update]
-  resources :plans, :except => [:edit, :update, :destroy]
+  resources :plans, :except => [:edit, :update, :destroy] do
+    resources :subscriptions, :except => [:edit, :update]
+  end
+
+  resources :subscriptions, :only => :index
 end
