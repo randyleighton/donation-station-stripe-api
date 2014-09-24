@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :nonprofits do
     resources :donations, :except => [:index, :edit, :update]
   end
+
+  resources :subscriptions, :except => [:edit, :update]
+  resources :plans, :except => [:edit, :update, :destroy]
 end

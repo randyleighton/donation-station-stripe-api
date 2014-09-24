@@ -6,7 +6,8 @@
 
 <div class="non-profit-list">
   <% @nonprofits.each do |np| %>
-    <%= link_to "#{np.name}", nonprofit_path(np) %>
+    <i><%= link_to "#{np.name}", nonprofit_path(np) %></i>
+    <br>
   <% end %>
 </div>
 

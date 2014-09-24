@@ -1,6 +1,10 @@
 class SubscriptionsController < ApplicationController
     before_filter :authenticate_user!
 
+    def index
+      @plans = Plan.all
+    end
+
     def new
       @nonprofit = Nonprofit.find(params[:nonprofit_id])
       @subscription = Subscription.new

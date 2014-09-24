@@ -1,0 +1,9 @@
+<%= render "layouts/errors", object: @plan %>
+
+<%= form_for @plan do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :amount %>
+  <%= f.text_field :amount %>
+  <%= f.submit("Submit", :class => "btn btn-success") %>
+<% end %>

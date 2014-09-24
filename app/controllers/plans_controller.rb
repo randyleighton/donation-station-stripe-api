@@ -14,7 +14,7 @@ class PlansController < ApplicationController
     @plan = Plan.create(plan_params)
     if @plan.valid?
       flash[:notice] = "Your plan has been added!"
-      redirect_to plans_path
+      redirect_to subscriptions_path
     else
       render "new"
     end
@@ -27,6 +27,6 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:name)
+    params.require(:plan).permit(:name, :amount)
   end
 end

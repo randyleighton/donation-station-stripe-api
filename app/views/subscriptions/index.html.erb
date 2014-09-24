@@ -1,0 +1,23 @@
+<h2>Subscription Options</h2>
+
+<% @plans.each do |plan| %>
+
+  <% if plan.name == "Sapling" %>
+    <div class="col-xs-12 col-sm-6 col-md-6 welcome-box">
+      <%= link_to image_tag("sapling.jpg", id: "sap-sub", :class => "image_box img-responsive"), plan_path(plan) %>
+      <h3>Sapling Level</h3>
+      <p>Support your non-profit with the starting tier. Sapling!</p>
+    </div>
+
+  <% elsif plan.name == "Redwood" %>
+    <div class="col-xs-12 col-sm-6 col-md-6 welcome-box">
+      <%= link_to image_tag("redwood.jpg", id: "red-sub", :class => "image_box img-responsive"), plan_path(plan) %>
+      <h3>Timeless Redwood</h3>
+      <p>The Redwood level is for our most generous supporters!</p>
+    </div>
+  <% end %>
+<% end %>
+
+<% if current_user.email == "test@test.com" %>
+  <%= link_to "Add Plan", new_plan_path, :class => "btn btn-success" %>
+<% end %>
