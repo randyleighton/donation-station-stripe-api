@@ -1,9 +1,15 @@
 <% content_for(:title, "Non-Profits | Donation Station" ) %>
 
-<h2>Non-Profits</h2>
+<div class="head-style">
+  <h2>Non-Profits</h2>
+</div>
 
-<% @nonprofits.each do |np| %>
-  <%= link_to "#{np.name}", nonprofit_path(np) %>
-<% end %>
+<div class="non-profit-list">
+  <% @nonprofits.each do |np| %>
+    <%= link_to "#{np.name}", nonprofit_path(np) %>
+  <% end %>
+</div>
 
+<div class="foot-style">
 <%= link_to "New Non-Profit", new_nonprofit_path, :class => "btn btn-success" %>
+</div>

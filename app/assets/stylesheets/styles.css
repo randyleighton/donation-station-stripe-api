@@ -57,15 +57,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-.center {
-  /* width: 300px;
-   height: 300px;
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   margin-left: -150px;
-   margin-top: -150px;*/
-}
 
 .image_box {
   margin: 0 auto;
@@ -82,7 +73,9 @@ body {
   margin-top: 25px;
 }
 
-.donation-list {
-
+.non-profit-list {
+  margin-top: 25px;
 }
-
+.donation-list i {
+  text-decoration: underline;
+}
