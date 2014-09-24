@@ -18,7 +18,7 @@ class Donation < ActiveRecord::Base
         :amount => self.amount, # amount in cents, again
         :currency => "usd",
         :card => self.token,
-        # :description => self.nonprofit.name
+        :description => self.user.email
       )
     rescue Stripe::CardError => e
   # The card has been declined
