@@ -44,7 +44,7 @@
     </label>
     <select>
       <% Nonprofit.all.each do |nonprofit| %>
-        <option value="#{nonprofit.name}"></option>
+        <option value="<%= nonprofit.id %>"><%= nonprofit.name %></option>
       <% end %>
     </select>
   </div>
