@@ -32,7 +32,7 @@ h3, h2{
 }
 
 body {
-  padding: 75px;
+  padding: 7em;
   background: url('sky.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
