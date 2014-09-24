@@ -1,4 +1,5 @@
 <% if user_signed_in? %>
+
   <div class="nav-format">
     Logged in as <strong><%= current_user.email %></strong>.
   </div>
@@ -23,4 +24,5 @@
     <%= link_to image_tag("home.png", :id=>"home-page", :class=>"img-responsive img-box"),root_path %>
     <p>Home</p>
   </div>
+
 <% end %>

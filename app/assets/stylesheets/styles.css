@@ -1,11 +1,24 @@
 .navbar {
   background-color: #dff0d8 !important;
+  border-bottom: 3px solid lightgray !important;
+}
+
+
+.navbar-default .navbar-brand {
+  padding-top: 1.2em;
+}
+
+@media (max-width: 480px) {
+  .navbar-default .navbar-brand {
+    padding-top: 0 !important;
+  }
 }
 
 .navbar-brand a {
   font-family: 'Philosopher', sans-serif !important;
   font-style: italic;
   font-size: 2em;
+  text-shadow: darkgray 0.1em 0.1em 0.2em;
 }
 .nav-format {
   float: left;
@@ -17,6 +30,11 @@
 .nav-format p {
   font-size: .5em;
 }
+
+.navbar-right {
+  overflow: auto !important;
+}
+
 
 .img-box {
   max-width: 1.5em !important;
@@ -39,12 +57,21 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
+.center {
+  /* width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -150px;
+   margin-top: -150px;*/
+}
 
 .image_box {
+  margin: 0 auto;
   max-height: 50%;
   border-radius: 2em !important;
-  background-color: lightgray !important;
+  border: 3px solid lightgray;
 }
 
 .welcome-box h3, p {
