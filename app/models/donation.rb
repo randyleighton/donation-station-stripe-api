@@ -3,7 +3,6 @@ class Donation < ActiveRecord::Base
   validates :token, presence: true
   belongs_to :nonprofit
   belongs_to :user
-# Create the charge on Stripe's servers - this will charge the user's card
   before_save :make_some_cents
   before_create :charge_card
 
@@ -12,6 +11,7 @@ class Donation < ActiveRecord::Base
   end
 
   def charge_card
+  # Create the charge on Stripe's servers - this will charge the user's card
     begin
       Stripe.api_key = ENV["TEST_SECRET"]
       charge = Stripe::Charge.create(
