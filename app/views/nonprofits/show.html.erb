@@ -4,9 +4,25 @@
 
 <div class="donation-list">
   <h3>Current Donations:</h3>
-  <i>Donation ID: Amount Donated</i>
   <% @nonprofit.donations.each do |donation| %>
-    <div><%= donation.id %>:   <%= donation.amount.to_f / 100 %></div>
+
+    <table class="donation-table">
+      <thead>
+        <tr>
+          <th>Donation ID</th>
+          <th>Donor Email</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><%= donation.id %></td>
+          <td><%= donation.user.email %></td>
+          <td>$<%= donation.amount.to_f / 100 %></td>
+        </tr>
+      </tbody>
+    </table>
   <% end %>
 </div>
 

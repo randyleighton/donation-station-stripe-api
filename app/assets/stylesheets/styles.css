@@ -80,3 +80,22 @@ body {
 .donation-list i {
   text-decoration: underline;
 }
+
+thead {
+  background-color: lightgray;
+}
+
+table, tr, td, th {
+  border: 1px solid black;
+}
+
+td, th {
+  padding: 5px !important;
+  text-align: center;
+}
+
+td {
+  background-color: #dff0d8;
+}
+
+
