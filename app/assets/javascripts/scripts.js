@@ -1,6 +1,6 @@
 //transfer setup
 function stripeResponseHandlerTSU(status, response) {
-  var $form = $('#payment-form-sub');
+  var $form = $('#nonprofit-form');
   console.log('in the callback...')
   if (response.error) {
     console.log('...and there were errors!')

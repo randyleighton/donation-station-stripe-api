@@ -11,16 +11,13 @@ class Nonprofit < ActiveRecord::Base
     # Set your secret key: remember to change this to your live secret key in production
     # See your keys here https://dashboard.stripe.com/account
     Stripe.api_key = ENV["TEST_SECRET"]
-    binding.pry
-    # Get the bank account details submitted by the form
-    token_id = params[:stripeToken]
 
     # Create a Recipient
     recipient = Stripe::Recipient.create(
       :name => self.name,
-      :type => "non-profit",
+      :type => "corporation",
       :email => self.email,
-      :bank_account => token_id
+      :card => self.token
     )
   end
 
