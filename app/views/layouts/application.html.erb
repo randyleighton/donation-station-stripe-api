@@ -9,11 +9,17 @@
   <script>
     Stripe.setPublishableKey("<%= ENV['TEST_PUBLISHABLE'] %>")
   </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 5000);
+ })
+</script>
 </head>
 <body class="container-fluid">
-
   <nav class="navbar navbar-default navbar-fixed-top" id="page_header">
-
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
         <span class="icon-bar"></span>
@@ -24,30 +30,28 @@
         <%= link_to "Donation Station", root_path %>
       </div>
     </div>
-
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <div class="nav navbar-nav navbar-right">
         <%= render 'layouts/login' %>
       </div>
     </div>
-
   </nav>
 
-<% if flash[:notice] != nil %>
-  <div class='alert alert-success' role='alert'>
-    <%= flash[:notice] %></div>
-<% end %>
-<% if flash[:alert] != nil %>
-  <div class='alert alert-danger' role='alert'>
-    <%= flash[:alert] %></div>
-<% end %>
+  <%= yield %>
 
-<%= yield %>
+  <div id="flash" class="clearfix">
+    <% if flash[:notice] != nil %>
+      <div class='alert alert-success' role='alert'>
+        <%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] != nil %>
+      <div class='alert alert-danger' role='alert'>
+        <%= flash[:alert] %></div>
+    <% end %>
+  </div>
 
-<!-- <div class="container-fluid"> -->
   <div class="navbar navbar-default navbar-fixed-bottom">
     <p id="copyright">&copy; 2014 Team Tardis - Amy and Randy!</p>
   </div>
-<!-- </div> -->
 </body>
 </html>
