@@ -4,5 +4,6 @@ describe Nonprofit do
 
   it { should have_many :donations }
   it { should have_many :subscriptions }
+  it { should have_many :transfers }
 
 end

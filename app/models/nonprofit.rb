@@ -4,6 +4,7 @@ class Nonprofit < ActiveRecord::Base
 
   has_many :donations
   has_many :subscriptions
+  has_many :transfers
 
   before_create :transfer_setup
 
