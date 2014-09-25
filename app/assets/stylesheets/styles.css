@@ -61,6 +61,12 @@
 .nav-format p {
   font-size: .5em;
 }
+.logged-in {
+  padding-top: 14px;
+}
+.logged-in p{
+  font-size: 1em;
+}
 
 .navbar-right {
   overflow: auto !important;
