@@ -10,7 +10,8 @@ class Subscription < ActiveRecord::Base
     customer = Stripe::Customer.create(
       :card => self.token,
       :plan => self.plan.name,
-      :email => self.user.email
+      :email => self.user.email,
+      :description => "#{self.nonprofit.name} Subscription"
     )
   end
 end
