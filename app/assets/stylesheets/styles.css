@@ -149,6 +149,10 @@ td {
   background-color: #dff0d8;
 }
 
+#user_remember_me {
+  margin-left: 109px;
+}
+
 #copyright {
   margin: 1.75% 0 0 1%;
   text-align: center;
