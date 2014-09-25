@@ -132,17 +132,35 @@ body {
   text-decoration: underline;
 }
 
+
 thead {
   background-color: lightgray;
 }
 
-table, tr, td, th {
+table {
+  border: 1px solid black;
+  border-radius: 25%;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+
+tr, td, th {
   border: 1px solid black;
 }
 
 td, th, th h3 {
   padding: 5px !important;
   text-align: center;
+}
+
+tr th {
+  color: #428bca;
+  text-align: center;
+}
+
+th h3 {
+  color: #428bca;
+  text-shadow: #dff0d8 0.1em 0.1em 0.2em;
 }
 
 td {
@@ -157,6 +175,9 @@ td {
   margin: 0 auto;
   width:75%;
 
+}
+.donation-table {
+  margin-bottom: 25px;
 }
 
 #copyright {
