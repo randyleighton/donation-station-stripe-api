@@ -61,11 +61,12 @@
 .nav-format p {
   font-size: .5em;
   text-align: center;
+  color: #428bca;
 }
 .logged-in {
   padding-top: 14px;
 }
-.logged-in p{
+.logged-in p {
   font-size: 1em;
 }
 
@@ -141,4 +142,13 @@ td, th {
 
 td {
   background-color: #dff0d8;
+}
+
+#copyright {
+  margin: 1.75% 0 0 1%;
+  text-align: center;
+  color: #428bca;
+}
+.navbar-fixed-bottom {
+  border: 2px solid lightgray !important;
 }
