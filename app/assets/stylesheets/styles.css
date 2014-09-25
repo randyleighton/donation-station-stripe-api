@@ -188,7 +188,8 @@ td {
 .navbar-fixed-bottom {
   border: 2px solid lightgray !important;
 }
-
-
+.form-inputs {
+  margin-bottom: 5px;
+}
 
 
