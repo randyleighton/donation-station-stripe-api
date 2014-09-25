@@ -106,6 +106,8 @@ body {
 
 .welcome-box h3 {
   text-align: center;
+  color: #dff0d8;
+  text-shadow: #2a6496 0.1em 0.1em 0.2em;
 }
 .welcome-box p {
   text-align: center;
