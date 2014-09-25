@@ -1,7 +1,43 @@
-<%= render "layouts/errors", object: @nonprofit %>
+<form action="/nonprofits" method="POST" id="nonprofit-form">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <span class="payment-errors"></span>
 
-<%= form_for @nonprofit do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit("Submit", :class => "btn btn-info") %>
-<% end %>
+  <div class="form-row">
+    <label>
+      <span>Name</span>
+      <input type="text" size="20" data-stripe="number" placeholder="ex. Forest Friends"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Email</span>
+      <input type="email" size="20" data-stripe="number" placeholder="ex. trees@forest.com"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Debit Card Number</span>
+      <input type="text" size="20" data-stripe="number" value="4242424242424242"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-stripe="cvc" value="242"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Expiration (MM/YYYY)</span>
+      <input type="text" size="2" data-stripe="exp-month" value="12"/>
+    </label>
+    <span> / </span>
+    <input type="text" size="4" data-stripe="exp-year" value="2015"/>
+  </div>
+
+  <button type="submit" class="btn btn-success">Create Non-Profit</button>
+</form>
