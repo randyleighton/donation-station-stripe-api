@@ -60,6 +60,7 @@
 
 .nav-format p {
   font-size: .5em;
+  text-align: center;
 }
 .logged-in {
   padding-top: 14px;
