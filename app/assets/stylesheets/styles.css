@@ -69,6 +69,9 @@
 .logged-in p {
   font-size: 1em;
 }
+.logged-in-name {
+  color: #428bca;
+}
 
 .navbar-right {
   overflow: auto !important;

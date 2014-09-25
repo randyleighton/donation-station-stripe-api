@@ -7,10 +7,9 @@ class Subscription < ActiveRecord::Base
 
   def create_subscription
     Stripe.api_key = ENV["TEST_SECRET"]
-    token = params[:stripeToken]
     customer = Stripe::Customer.create(
       :card => self.token,
-      :plan => self.plan,
+      :plan => self.plan.name,
       :email => self.user.email
     )
   end

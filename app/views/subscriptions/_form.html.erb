@@ -35,9 +35,9 @@
     <label>
       <span>Non-Profit</span>
     </label>
-    <select>
+    <select name="subscription[nonprofit_id]">
       <% Nonprofit.all.each do |nonprofit| %>
-        <option value="<%= nonprofit.id %>" name="subscription[nonprofit_id]"><%= nonprofit.name %></option>
+        <option value="<%= nonprofit.id %>"><%= nonprofit.name %></option>
       <% end %>
     </select>
   </div>

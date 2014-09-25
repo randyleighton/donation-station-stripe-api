@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 
   <div class="nav-format logged-in">
-    Logged in as <strong><%= current_user.email %></strong>.
+    Logged in as <strong><span class="logged-in-name"><%= current_user.email %></span></strong>.
   </div>
   <div class="nav-format">
     <%= link_to image_tag("edit.png", :id=>"edit-prof", :class=>"img-responsive img-box"), edit_user_registration_path %>
