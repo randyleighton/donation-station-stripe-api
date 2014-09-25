@@ -1,7 +1,8 @@
-class Transfer < ApplicationController
+class TransfersController < ApplicationController
   before_filter :authenticate_user!
 
   def new
+    @nonprofit = Nonprofit.find(params[:nonprofit_id])
     @transfer = Transfer.new
   end
 
@@ -9,7 +10,7 @@ class Transfer < ApplicationController
     @nonprofit = Nonprofit.find(params[:nonprofit_id])
     @transfer = Transfer.create(transfer_params)
     if @transfer.valid?
-      flash[:notice] = "Your transfer has been added!"
+      flash[:notice] = "Money has been sent!"
       redirect_to nonprofit_path(@nonprofit)
     else
       render "new"
@@ -27,5 +28,3 @@ class Transfer < ApplicationController
   end
 end
 
-
-end

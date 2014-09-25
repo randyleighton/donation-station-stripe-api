@@ -20,6 +20,8 @@ class Nonprofit < ActiveRecord::Base
       :email => self.email,
       :card => self.token
     )
+    self.recipient_token = recipient.id
+    self.card_token = recipient.cards.data[0]["id"]
   end
 
 end

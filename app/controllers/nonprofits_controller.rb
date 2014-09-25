@@ -47,6 +47,6 @@ class NonprofitsController < ApplicationController
 
 private
   def nonprofit_params
-    params.require(:nonprofit).permit(:name, :email, :token)
+    params.require(:nonprofit).permit(:name, :email, :token, :recipient_token, :card_token)
   end
 end

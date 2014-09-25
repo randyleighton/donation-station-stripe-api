@@ -14,10 +14,10 @@ class Transfer < ActiveRecord::Base
 
     # Create a transfer to the specified recipient
     transfer = Stripe::Transfer.create(
-      :amount => self.amount
+      :amount => self.amount,
       :currency => "usd",
-      :recipient => self.nonprofit.id,
-      :card => self.token,
+      :recipient => "rp_14gh9ZBnL2B7AForQXgYBChC",
+      :card => "card_14gh9YBnL2B7AForbnrvstUk"
     )
   end
 end
