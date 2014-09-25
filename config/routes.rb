@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   resources :nonprofits do
     resources :donations, :except => [:index, :edit, :update]
+    resources :transfers, :only => [:new, :create, :show]
   end
 
   resources :plans, :except => [:edit, :update, :destroy] do

@@ -31,7 +31,7 @@
 
 <div class="foot-style">
   <% if current_user.email == "test@test.com" %>
-    <%= link_to "Transfer Funds", new_nonprofit_path, :class => "btn btn-primary" %>
+    <%= link_to "Transfer Funds", new_nonprofit_transfer_path(@nonprofit), :class => "btn btn-primary" %>
   <% end %>
 </div>
 
