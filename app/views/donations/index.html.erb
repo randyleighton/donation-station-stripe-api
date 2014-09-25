@@ -1,0 +1,34 @@
+
+<div class="col-xs-12 col-sm-6">
+  <div class="gifts-list">
+      <table class="donation-table">
+        <thead>
+          <tr>
+            <th colspan="3">
+              <h3>Recent Donations</h3>
+            </th>
+          </tr>
+          <tr>
+            <th>Non-Profit</th>
+            <th>Donor Email</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+
+        <% Donation.all.each do |donation| %>
+        <tbody>
+          <tr>
+            <td><%= donation.nonprofit.name %></td>
+            <td><%= donation.user.email %></td>
+            <td>$<%= donation.amount.to_f / 100 %></td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-6 welcome-box">
+  <%= link_to image_tag("donation.jpg", id:"donation-main", :class => "image_box img-responsive"), nonprofits_path %>
+  <h3>Donate Now</h3>
+</div>

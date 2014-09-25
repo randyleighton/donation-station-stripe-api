@@ -1,6 +1,10 @@
 class DonationsController < ApplicationController
   before_filter :authenticate_user!
 
+  def index
+    @donations = Donation.all
+  end
+
   def new
     @nonprofit = Nonprofit.find(params[:nonprofit_id])
     @donation = Donation.new

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
 
   resources :subscriptions, :only => :index
+  resources :donations, :only => :index
 end

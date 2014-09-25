@@ -140,7 +140,7 @@ table, tr, td, th {
   border: 1px solid black;
 }
 
-td, th {
+td, th, th h3 {
   padding: 5px !important;
   text-align: center;
 }
@@ -153,6 +153,12 @@ td {
   margin-left: 109px;
 }
 
+.donation-table, .gifts-list h2 {
+  margin: 0 auto;
+  width:75%;
+
+}
+
 #copyright {
   margin: 1.5% 0;
   text-align: center;
@@ -161,3 +167,7 @@ td {
 .navbar-fixed-bottom {
   border: 2px solid lightgray !important;
 }
+
+
+
+
