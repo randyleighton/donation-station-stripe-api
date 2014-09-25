@@ -9,9 +9,11 @@
     <div>
       <%= link_to "#{np.name}", nonprofit_path(np), :class=>"non-profit-list" %>
     </div>
-    <% end %>
+  <% end %>
 </div>
 
 <div class="foot-style">
-<%= link_to "New Non-Profit", new_nonprofit_path, :class => "btn btn-success" %>
+  <% if current_user.email == "test@test.com" %>
+    <%= link_to "New Non-Profit", new_nonprofit_path, :class => "btn btn-success" %>
+  <% end %>
 </div>
