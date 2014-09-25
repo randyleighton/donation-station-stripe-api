@@ -33,7 +33,7 @@ class SubscriptionsController < ApplicationController
     end
 
   private
-    def donation_params
-      params.require(:donation).permit(:amount, :token, :nonprofit_id, :plan_id).merge(:user_id => current_user.id)
+    def subscription_params
+      params.require(:subscription).permit(:token, :nonprofit_id, :plan_id).merge(:user_id => current_user.id)
     end
 end

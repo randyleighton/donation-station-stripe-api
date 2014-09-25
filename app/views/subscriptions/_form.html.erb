@@ -2,18 +2,11 @@
 
 <h2>Create Your Subscription</h2>
 
-<form action="/plans/<%= @plan.id %>/subscriptions" method="POST" id="payment-form">
+<form action="/plans/<%= @plan.id %>/subscriptions" method="POST" id="payment-form-sub">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="subscription[user_id]" value="<%= current_user.id %>">
   <input type="hidden" name="subscription[plan_id]" value="<%= @plan.id %>">
   <span class="payment-errors"></span>
-
-  <div class="form-row">
-    <label>
-      <span>Amount</span>
-      <input type="text" size="20" name="subscription[amount]" data-stripe="amount" placeholder="12"/>
-    </label>
-  </div>
 
   <div class="form-row">
     <label>
@@ -44,7 +37,7 @@
     </label>
     <select>
       <% Nonprofit.all.each do |nonprofit| %>
-        <option value="<%= nonprofit.id %>"><%= nonprofit.name %></option>
+        <option value="<%= nonprofit.id %>" name="subscription[nonprofit_id]"><%= nonprofit.name %></option>
       <% end %>
     </select>
   </div>

@@ -3,6 +3,8 @@ class Subscription < ActiveRecord::Base
   belongs_to :nonprofit
   belongs_to :plan
 
+  before_create :create_subscription
+
   def create_subscription
     Stripe.api_key = ENV["TEST_SECRET"]
     token = params[:stripeToken]
