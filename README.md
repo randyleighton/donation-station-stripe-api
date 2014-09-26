@@ -10,7 +10,8 @@ This is a project using Ruby on Rails, HTML5, CSS3, Javascript, jQuery, Devise a
 * Allows an admin to transfer funds to a non-profit
 
 Check out Donation Station on Heroku:
-http://donation-station.herokuapp.com/
+<a href="http://donation-station.herokuapp.com/" target="_blank">Donation Station <strong>Live</strong> Heroku App</a>
+
 
 ##Installation
 Clone this repo in your terminal:
