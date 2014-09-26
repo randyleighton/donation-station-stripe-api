@@ -9,6 +9,9 @@ https://github.com/randyleighton/donation_station-stripe-api.git* Adds new non-p
 * Allows a logged in user to create a subscription to a specified non-profit
 * Allows an admin to transfer funds to a non-profit
 
+Check out Donation Station on Heroku:
+http://donation-station.herokuapp.com/
+
 ##Installation
 Clone this repo in your terminal:
 
