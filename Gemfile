@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'bcrypt', '~> 3.1.5'
-gem "simple_form"
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
@@ -35,4 +34,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'webmock'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
