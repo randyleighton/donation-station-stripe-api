@@ -9,8 +9,8 @@ This is a project using Ruby on Rails, HTML5, CSS3, Javascript, jQuery, Devise a
 * Allows a logged in user to create a subscription to a specified non-profit
 * Allows an admin to transfer funds to a non-profit
 
-Check out Donation Station on Heroku:
-<a href="http://donation-station.herokuapp.com/" target="_blank">Donation Station <strong>Live</strong> Heroku App</a>
+Check this app out running on Heroku:
+<a href="http://donation-station.herokuapp.com/" target="_blank">Donation Station on Heroku</a>
 
 
 ##Installation
