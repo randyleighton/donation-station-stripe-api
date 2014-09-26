@@ -2,7 +2,7 @@
 
 This is a project using Ruby on Rails, HTML5, CSS3, Javascript, jQuery, Devise authentication, and the Stripe API. It's a responsive web app for donating funds to various non-profit organizations. Here's what it does:
 
-* Adds new non-profits to the list
+https://github.com/randyleighton/donation_station-stripe-api.git* Adds new non-profits to the list
 * Creates a non-profit as a Stripe recipient
 * Tokenizes credit and debit card information
 * Allows a logged in user to make a one time only donation
@@ -13,7 +13,8 @@ This is a project using Ruby on Rails, HTML5, CSS3, Javascript, jQuery, Devise a
 Clone this repo in your terminal:
 
 ```console
-$ git clone https://github.com/AmyVS/donation_station.git
+$ git clone https://github.com/AmyVS/donation_station.git  (or)
+$ git clone https://github.com/randyleighton/donation_station-stripe-api.git
 ```
 
 If you haven't already, be sure to install [postgres](http://www.postgresql.org/download/):
