@@ -17,3 +17,198 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Cabin|Philosopher:700);
 
+.navbar {
+  background-color: #dff0d8 !important;
+  border-bottom: 3px solid lightgray !important;
+}
+
+.navbar-brand {
+  margin-top: .25em;
+}
+
+.navbar-brand a {
+  font-family: 'Philosopher', sans-serif !important;
+  font-style: italic;
+  font-size: 2em;
+  text-shadow: darkgray 0.1em 0.1em 0.2em;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand  {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-brand a {
+  font-family: 'Philosopher', sans-serif !important;
+  font-style: italic;
+  font-size: 1.2em;
+  text-shadow: darkgray 0.1em 0.1em 0.2em;
+  }
+}
+@media (max-width: 250px) {
+  .navbar-brand a {
+  font-family: 'Philosopher', sans-serif !important;
+  font-style: italic;
+  font-size: .9em;
+  text-shadow: darkgray 0.1em 0.1em 0.2em;
+  }
+  .navbar-brand  {
+    margin-bottom: .3em;
+  }
+}
+@media (max-width: 210px) {
+  .navbar-brand a {
+  font-family: 'Philosopher', sans-serif !important;
+  font-style: italic;
+  font-size: .6em;
+  text-shadow: darkgray 0.1em 0.1em 0.2em;
+  }
+  .navbar-brand  {
+    margin-bottom: .3em;
+  }
+}
+
+.nav-format {
+  float: left;
+  padding-right: 30px;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
+
+.nav-format p {
+  font-size: .55em;
+  text-align: center;
+  color: #428bca;
+}
+.logged-in {
+  padding-top: 14px;
+}
+.logged-in p {
+  font-size: 1em;
+}
+.logged-in-name {
+  color: #428bca;
+}
+
+.navbar-right {
+  overflow: auto !important;
+}
+
+
+.img-box {
+  max-width: 1.5em !important;
+  float: right;
+}
+
+h3, h2{
+  font-family: 'Philosopher', sans-serif !important;
+}
+
+* {
+  font-family: 'Cabin', sans-serif !important;
+}
+
+body {
+  padding: 7em;
+  background: url('sky.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.image_box {
+  margin: 0 auto;
+  max-height: 50%;
+  border-radius: 2em !important;
+  border: 3px solid lightgray;
+}
+
+.welcome-box h3 {
+  text-align: center;
+  color: #dff0d8;
+  text-shadow: #2a6496 0.1em 0.1em 0.2em;
+}
+.welcome-box p {
+  text-align: center;
+}
+.head-style {
+  margin-bottom: 10px;
+}
+
+.foot-style {
+  margin-top: 25px;
+}
+
+.non-profit-list {
+  margin-bottom: 9px;
+  margin-left: 7px;
+  font-size: 1.5em;
+}
+.donation-list i {
+  text-decoration: underline;
+}
+
+
+thead {
+  background-color: lightgray;
+}
+
+table {
+  border: 1px solid black;
+  border-radius: 25%;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+
+tr, td, th {
+  border: 1px solid black;
+}
+
+td, th, th h3 {
+  padding: 5px !important;
+  text-align: center;
+}
+
+tr th {
+  color: #428bca;
+  text-align: center;
+}
+
+th h3 {
+  color: #428bca;
+  text-shadow: #dff0d8 0.1em 0.1em 0.2em;
+}
+
+td {
+  background-color: #dff0d8;
+}
+
+#user_remember_me {
+  margin-left: 109px;
+}
+
+.donation-table, .gifts-list h2 {
+  margin: 0 auto;
+  width:75%;
+
+}
+.donation-table {
+  margin-bottom: 25px;
+}
+
+#copyright {
+  margin: 1.5% 0;
+  text-align: center;
+  color: #428bca;
+}
+.navbar-fixed-bottom {
+  border: 2px solid lightgray !important;
+}
+.form-inputs, .form-actions {
+  margin: 5px 5px 5px 0px;
+}
+
+
